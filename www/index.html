@@ -3,9 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carregando...</title>
+  <title>App</title>
+  <script>
+    document.addEventListener('deviceready', function() {
+      const url = localStorage.getItem('app_url');
+      if (url) window.location.replace(url);
+    }, false);
+  </script>
 </head>
 <body>
-  <h3 style="text-align:center; margin-top:50px;">Template pronto para uso</h3>
+  <h2 style="text-align:center; margin-top:50px;">Template pronto!</h2>
 </body>
 </html>
