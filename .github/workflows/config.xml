@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.seuapp.padrao" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>App Gerado</name>
+  <description>Template para converter HTML/URL em APK</description>
+  <author email="seu@email.com" href="https://github.com">Você</author>
+
+  <!-- Permissões essenciais -->
+  <access origin="*" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-navigation href="*" />
+
+  <preference name="Orientation" value="portrait" />
+  <preference name="LoadUrlTimeoutValue" value="30000" />
+  <preference name="DefaultVolumeStream" value="media" />
+  <preference name="AndroidLaunchMode" value="singleTop" />
+</widget>
