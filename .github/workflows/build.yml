@@ -1,7 +1,7 @@
 name: Gerar APK
 on:
   push:
-    branches: [ principal ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
