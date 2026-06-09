@@ -1,30 +1,29 @@
 name: Gerar APK
 on:
   push:
-    branches: [ main ]
+    branches: [ principal ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - name: Baixar código
+      - name: Baixar arquivos
         uses: actions/checkout@v4
 
-      - name: Instalar Node e Cordova
+      - name: Instalar ferramentas
         run: |
           npm install -g cordova@12
+          cordova telemetry off
 
-      - name: Preparar projeto Android
-        run: |
-          cordova platform add android@12
+      - name: Preparar Android
+        run: cordova platform add android@12
 
       - name: Compilar APK
-        run: |
-          cordova build android --debug
+        run: cordova build android --debug
 
       - name: Disponibilizar APK
         uses: actions/upload-artifact@v4
         with:
-          name: App-Gerado
+          name: Meu-APK
           path: platforms/android/app/build/outputs/apk/debug/app-debug.apk
